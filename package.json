@@ -2,17 +2,23 @@
   "name": "loa-oreha",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://youngha1994.github.io/loa-oreha",
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
+    "bootstrap": "^5.3.3",
+    "bootstrap-icons": "^1.11.3",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-    "react-scripts": "5.0.1",
+    "react-scripts": "^5.0.1",
+    "typescript": "^5.4.5",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
+    "start": "set BROWSER=none&& react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
@@ -34,5 +40,9 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
+    "gh-pages": "^6.1.1"
   }
 }

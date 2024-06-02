@@ -1,38 +1,102 @@
-.App {
-  text-align: center;
+body {
+  background-color: #222;
+  color: #FFF;
+  margin: 20px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+#input-grid {
+  display: grid;
+  grid-template-columns: repeat(2, fit-content(3em));
+  grid-template-rows: repeat(10, fit-content(3em)); 
+  column-gap: 10px;
+  row-gap: 15px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+#market-prices-header {
+  margin: 0;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.component-with-help {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: flex-end;
+  padding: 1em 0;
 }
 
-.App-link {
-  color: #61dafb;
+.help-text {
+  text-wrap: nowrap;
+  width: min-content;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.loa-screenshot {
+  width: 100%;
+}
+
+.help-icon {
+  font-size: 1em;
+  margin: 0 0 0 5px;
+  vertical-align: bottom;
+  color: lightskyblue;
+}
+
+#help {
+  position: absolute;
+}
+
+.help-icon:hover .tooltip {
+  display: block;
+}
+
+.tooltip {
+  display: none;
+  width: min-content;
+  background-color: #555;
+  padding: 0px 1em 1em 1em;
+  margin: -.5em 1em;
+}
+
+.material-label {
+  display: flex;
+  width: auto;
+  white-space: nowrap;
+}
+
+.material-price {
+  margin: auto;
+  width: 4em;
+}
+
+.material-title {
+  margin: auto 10px;
+}
+
+.material-icon {
+  width: 2em;
+  height: 2em;
+  margin: auto 0;
+}
+
+.result {
+  width: auto;
+  height: auto;
+  background-color: #111;
+  border-color: #333;
+  border-style: solid;
+  transition-duration: .5s;
+  transition-property: transform, opacity;
+  margin: 2em 0;
+  padding: .5em;
+  width: min-content;
+  text-wrap: nowrap;
+}
+
+.instruction-with-image {
+  display: flex;
+  flex-direction: row;
+  align-items:center;
+  column-gap: .5em;
+}
+
+.slideLeft {
+  transform: translate(-100%, 0);
+  opacity: 0;
 }
