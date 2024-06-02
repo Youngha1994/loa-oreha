@@ -45,7 +45,7 @@ function App() {
             <p>Enter the prices into the input form below.</p>
           </div>
           <div>
-            <img className='loa-screenshot' src='/loa-market-example.png' alt='Market Example'/>
+            <img className='loa-screenshot' src='/loa_market_example.png' alt='Market Example'/>
           </div>
         </div>
       </div>
