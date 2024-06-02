@@ -1,0 +1,25 @@
+{
+  "short_name": "Oreha Calcs",
+  "name": "Oreha Calculator",
+  "icons": [
+    {
+      "src": "basic_oreha.ico",
+      "sizes": "64x64",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "basic_oreha.png",
+      "type": "image/png",
+      "sizes": "64x64"
+    },
+    {
+      "src": "basic_oreha.png",
+      "type": "image/png",
+      "sizes": "64x64"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
+}
