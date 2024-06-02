@@ -2,7 +2,7 @@ export const MATERIALS = {
     ancientRelic: {
         id: "ancientRelic",
         name: "Ancient Relic", 
-        image: "%PUBLIC_URL%/ancient_relic.png"
+        image: "./ancient_relic.png"
     },
     fish: {
         id: "fish", 
