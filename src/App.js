@@ -45,7 +45,7 @@ function App() {
             <p>Enter the prices into the input form below.</p>
           </div>
           <div>
-            <img className='loa-screenshot' src='./loa_market_example.png' alt='Market Example'/>
+            <img className='loa-screenshot' src={process.env.PUBLIC_URL + '/loa_market_example.png'} alt='Market Example'/>
           </div>
         </div>
       </div>
@@ -58,7 +58,7 @@ function App() {
         return (
           <Fragment key={item.id}>
             <div className='material-label'>
-              <img className='material-icon' src={item.image} alt={item.name + " image"} />
+              <img className='material-icon' src={process.env.PUBLIC_URL + item.image} alt={item.name + " image"} />
               <span className='material-title'>{item.name}</span>
             </div>
             <input 
@@ -111,11 +111,11 @@ function App() {
         item.profitMargin = Math.round(item.profitMargin * 100)
         const conversions = item.materials.reduce((conversions, material) => {
           let conversion = <span>Buy {material.name}. </span>
-          let conversion_image = <img className='material-icon' src={MATERIALS[material.id].image} alt={MATERIALS[material.id].name + "image"}/>
+          let conversion_image = <img className='material-icon' src={process.env.PUBLIC_URL + MATERIALS[material.id].image} alt={MATERIALS[material.id].name + "image"}/>
           if (material.bestMaterial !== material.id) {
             conversion = `Buy ${MATERIALS[material.bestMaterial].name} and convert to ${material.name}. `
             conversion_image = <Fragment>
-              <img className='material-icon' src={MATERIALS[material.bestMaterial].image} alt={MATERIALS[material.bestMaterial].name + " image"}/>
+              <img className='material-icon' src={process.env.PUBLIC_URL + MATERIALS[material.bestMaterial].image} alt={MATERIALS[material.bestMaterial].name + " image"}/>
               <i className='bi-caret-right-fill' />
               {conversion_image}
             </Fragment>
@@ -134,7 +134,7 @@ function App() {
           <Fragment>
           <div className='instruction-with-image'>
             <span>The best profit margin is from crafting {item.name} with a {item.profitMargin}% margin.</span>
-            <img className='material-icon' src={itemImagePath} alt={item.name + " image"}/>
+            <img className='material-icon' src={process.env.PUBLIC_URL + itemImagePath} alt={item.name + " image"}/>
           </div>
           <p>Craft using {item.cheapestMaterial} materials.</p>
           {conversions}

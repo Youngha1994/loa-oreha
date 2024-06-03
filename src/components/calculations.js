@@ -102,6 +102,8 @@ const CONVERSION_RATES = {
     }
 };
 
+const MARKET_TAX = 0.95
+
 // CRAFTING_MATERIALS are the raw items used during crafting
 const CRAFTING_MATERIALS = [
     "fish",
@@ -154,6 +156,7 @@ export class OrehaFusionMaterial {
     calculateCheapestCost() {
         const tradeSkills = Object.keys(N_PER_CRAFT[this.id].input)
         const costsPerTradeSkill = tradeSkills.map((tradeSkill) => this.calculateCost(tradeSkill))
+
         const bestCost = Math.min.apply(Math, costsPerTradeSkill);
         const cheapeastMateral = tradeSkills[costsPerTradeSkill.findIndex(price => price === bestCost)]
         this.materials = Object.keys(N_PER_CRAFT[this.id]['input'][cheapeastMateral]).reduce((items, item) => {
@@ -194,7 +197,7 @@ export const CalculateBestOreha = (materialCosts) => {
         )}, {});
 
     const profitMargins = orehas.map((materialName) => {
-        return (MATERIAL_COSTS[materialName] - OrehaFusionMaterials[materialName].cheapestCost) / OrehaFusionMaterials[materialName].cheapestCost
+        return ((MATERIAL_COSTS[materialName]*MARKET_TAX - OrehaFusionMaterials[materialName].cheapestCost) / MATERIAL_COSTS[materialName]*MARKET_TAX)
     })
     const bestProfitMargin = Math.max.apply(Math, profitMargins);
     let bestOreha = OrehaFusionMaterials[orehas[profitMargins.findIndex(profitMargin => profitMargin === bestProfitMargin)]]
