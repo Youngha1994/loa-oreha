@@ -1,13 +1,13 @@
 export const MATERIALS = {
-    ancientRelic: {
-        id: "ancientRelic",
-        name: "Ancient Relic", 
-        image: "/ancient_relic.png"
-    },
     fish: {
         id: "fish", 
         name: "Fish", 
         image: "/fish.png"
+    },
+    ancientRelic: {
+        id: "ancientRelic",
+        name: "Ancient Relic", 
+        image: "/ancient_relic.png"
     },
     redfleshFish: {
         id: "redfleshFish", 
