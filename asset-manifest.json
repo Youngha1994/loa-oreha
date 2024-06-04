@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/loa-oreha/static/css/main.4c7dc89b.css",
-    "main.js": "/loa-oreha/static/js/main.89c952f7.js",
+    "main.js": "/loa-oreha/static/js/main.74d355e6.js",
     "static/js/453.108b40f4.chunk.js": "/loa-oreha/static/js/453.108b40f4.chunk.js",
     "static/media/bootstrap-icons.woff?": "/loa-oreha/static/media/bootstrap-icons.39795c0b4513de014cf8.woff",
     "static/media/bootstrap-icons.woff2?": "/loa-oreha/static/media/bootstrap-icons.b7bcc075b395c14ce8c2.woff2",
     "index.html": "/loa-oreha/index.html",
     "main.4c7dc89b.css.map": "/loa-oreha/static/css/main.4c7dc89b.css.map",
-    "main.89c952f7.js.map": "/loa-oreha/static/js/main.89c952f7.js.map",
+    "main.74d355e6.js.map": "/loa-oreha/static/js/main.74d355e6.js.map",
     "453.108b40f4.chunk.js.map": "/loa-oreha/static/js/453.108b40f4.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.4c7dc89b.css",
-    "static/js/main.89c952f7.js"
+    "static/js/main.74d355e6.js"
   ]
 }
