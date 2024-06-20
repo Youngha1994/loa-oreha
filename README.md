@@ -1,3 +1,5 @@
+<a href="https://youngha1994.github.io/loa-oreha/">Github page link</a>
+
 A calculator for crafting Oreha Fusion Materials in the MMORPG game Lost Ark.
 
 Enter the market prices and submit to calculate the best profit margins, including what
